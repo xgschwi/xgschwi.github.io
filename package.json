@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "webpack serve --mode=development",
-    "build": "rm dist/200.html && webpack --mode=production",
+    "build": "webpack --mode=production",
     "postbuild": "react-snap"
   },
   "reactSnap": {
