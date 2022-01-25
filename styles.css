@@ -11,7 +11,7 @@
   box-sizing: border-box; /* 1 */
   border-width: 0; /* 2 */
   border-style: solid; /* 2 */
-  border-color: #e5e7eb; /* 2 */
+  border-color: currentColor; /* 2 */
 }
 
 ::before,
@@ -424,6 +424,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.flex {
+  display: flex;
+}
+.h-10 {
+  height: 2.5rem;
+}
+.bg-dull-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(146 186 190 / var(--tw-bg-opacity));
+}
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -432,13 +442,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.5rem;
   line-height: 2rem;
 }
-.text-green-600 {
+.text-light-green {
   --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
+  color: rgb(187 207 147 / var(--tw-text-opacity));
 }
-.text-red-600 {
+.text-dull-blue {
   --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
+  color: rgb(146 186 190 / var(--tw-text-opacity));
 }
+.navbarItem {
+        margin: auto 0 auto 50px;
+    }
 
 /*# sourceMappingURL=styles.css.map*/
