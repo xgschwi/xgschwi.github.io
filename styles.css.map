@@ -1,0 +1,1 @@
+{"version":3,"file":"styles.css","mappings":"AAAA,mBAAmB,C","sources":["webpack://xgschwi.github.io/./src/styles.css"],"sourcesContent":["@tailwind preflight;\n\n@tailwind components;\n\n@tailwind utilities;"],"names":[],"sourceRoot":""}
