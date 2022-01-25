@@ -1,12 +1,16 @@
 import React from 'react';
 import { hydrate, render } from 'react-dom';
 import './styles.css';
+import Navbar from './components/Navbar';
 
 function Index() {
 	return (
 		<div>
-			<h1 className="text-xl text-green-600">Website under construction :D</h1>
-			<p className="text-2xl text-red-600">Stay tuned</p>
+			<Navbar />
+			<h1 className="text-xl text-light-green">
+				Website under construction :D
+			</h1>
+			<p className="text-2xl text-dull-blue">Stay tuned</p>
 		</div>
 	);
 }

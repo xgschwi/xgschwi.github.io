@@ -1,20 +1,20 @@
 .markdown-body {
-    --md-code-background: #acd7e9;
-    --md-code-radius: 5px;
+--md-code-background: #acd7e9;
+--md-code-radius: 5px;
 }
 
-Site Readme
-===========
+# Site Readme
 
-## Description
+### Description
+
 This is a sample web application using React, react-snap, webpack, and tailwind css to build a web application with pre-rendered content and tailwind styling.
 
-Details
--------
+## Details
 
-## Installations
+### Installations
 
 Dev Dependencies include:
+
 ```javascript
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
@@ -45,6 +45,7 @@ npm install -D @babel/core @babel/present-env @babel/preset-react autoprefixer b
 Husky version 4 was used to properly work for the pre-commit formatting
 
 Dependencies Include:
+
 ```javascript
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.1",
@@ -68,7 +69,7 @@ Dependencies Include:
 
 Testing will be used to test the components; eslint and prettier will detect and format code as necessary when committing the code; react is the base of this web application; react-snap is being used for pre-rendering purposes of the javascript to html.
 
-## Scripts
+### Scripts
 
 ```javascript
     "start": "webpack serve --mode=development",
@@ -79,14 +80,14 @@ Testing will be used to test the components; eslint and prettier will detect and
     "postbuild": "react-snap"
 ```
 
-- ```npm run start``` will serve the development server for the application
-- ```npm run lint``` will run lint on any files in the src directory
-- ```npm run lintFix``` will find any formatting errors described in .eslintrc.json and attempt to fix the errors
-- ```npm run format``` uses prettier to format all code according to .prettierrc
-- ```npm run build``` will use webpack to build production files
-- ```postbuild: react-snap``` will run react-snap after the build phase and create 200.html with pre-rendered content for SEO purposes.
+- `npm run start` will serve the development server for the application
+- `npm run lint` will run lint on any files in the src directory
+- `npm run lintFix` will find any formatting errors described in .eslintrc.json and attempt to fix the errors
+- `npm run format` uses prettier to format all code according to .prettierrc
+- `npm run build` will use webpack to build production files
+- `postbuild: react-snap` will run react-snap after the build phase and create 200.html with pre-rendered content for SEO purposes.
 
-## Formatting
+### Formatting
 
 ```javascript
 "husky": {
@@ -108,64 +109,61 @@ As the code is committed, husky will use the pre-commit hook to use the command 
 
 `git add . && git commit -m "Example"` will cause the pre-commit hook to be triggered.
 
-## Webpack
+### Webpack
 
 Webpack is used to run babel for transpiling javascript for usage in most browsers. Here are the details from webpack.config.js:
+
 ```javascript
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: ['@babel/polyfill', './src/index.js'],
-  output: {
-    path:path.resolve(__dirname, "dist"),
-  },
-  devServer: {
-    static: path.resolve(__dirname, 'dist'),
-    compress: true,
-    port: 3000,
-  },
-  devtool: 'source-map',
-  module: {
-    rules: [
-        
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader", "postcss-loader",
-          ],
-      },
-        {
-            test: /\.(png|jp(e*)g|svg|gif|ico)$/,
-            exclude: /node_modules/,
-            use: ['file-loader?name=[name].[ext]']
-          },
-          {
-            test: /\.svg$/,
-            use: ['@svgr/webpack'],
-          },
-          {
-            test: /\.js$/,
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env', '@babel/preset-react']
-            }
-          },
-    ]
-  },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: "styles.css",
-      chunkFilename: "styles.css"
-    }),
-    new HtmlWebpackPlugin({
-      template: "./dist/index.html",
-      filename: "./index.html",
-    })
-  ]
-}
+	entry: ['@babel/polyfill', './src/index.js'],
+	output: {
+		path: path.resolve(__dirname, 'dist'),
+	},
+	devServer: {
+		static: path.resolve(__dirname, 'dist'),
+		compress: true,
+		port: 3000,
+	},
+	devtool: 'source-map',
+	module: {
+		rules: [
+			{
+				test: /\.css$/,
+				use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+			},
+			{
+				test: /\.(png|jp(e*)g|svg|gif|ico)$/,
+				exclude: /node_modules/,
+				use: ['file-loader?name=[name].[ext]'],
+			},
+			{
+				test: /\.svg$/,
+				use: ['@svgr/webpack'],
+			},
+			{
+				test: /\.js$/,
+				loader: 'babel-loader',
+				options: {
+					presets: ['@babel/preset-env', '@babel/preset-react'],
+				},
+			},
+		],
+	},
+	plugins: [
+		new MiniCssExtractPlugin({
+			filename: 'styles.css',
+			chunkFilename: 'styles.css',
+		}),
+		new HtmlWebpackPlugin({
+			template: './dist/index.html',
+			filename: './index.html',
+		}),
+	],
+};
 ```
 
 - The entry section will use babel's polyfill as it loads in index.js in the src directory
