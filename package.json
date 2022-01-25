@@ -20,7 +20,7 @@
 		"*.js": [
 			"npm run lintFix",
 			"npm run format",
-			"git add"
+			"git add ."
 		]
 	},
 	"eslintConfig": {
