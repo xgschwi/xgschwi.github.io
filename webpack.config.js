@@ -47,6 +47,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './dist/index.html',
 			filename: './index.html',
+			favicon: './rss/xicon.ico',
 		}),
 	],
 };
