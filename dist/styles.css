@@ -11,7 +11,7 @@
   box-sizing: border-box; /* 1 */
   border-width: 0; /* 2 */
   border-style: solid; /* 2 */
-  border-color: #e5e7eb; /* 2 */
+  border-color: currentColor; /* 2 */
 }
 
 ::before,
@@ -424,21 +424,46 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.flex {
+  display: flex;
 }
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.h-12 {
+  height: 3rem;
 }
-.text-green-600 {
+.bg-dull-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(146 186 190 / var(--tw-bg-opacity));
+}
+.pl-20 {
+  padding-left: 5rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-light-green {
   --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
+  color: rgb(187 207 147 / var(--tw-text-opacity));
 }
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
+.navbarItem {
+        margin: auto 0 auto 50px;
+        padding: 0 12px;
+        border-radius: 5px;
+        box-shadow: 2px 1px 2px 2px #d7f6f8;
+        color: white;
+    }
+.navbarItem:hover {
+        margin: auto 0 auto 50px;
+        padding: 0 12px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px 3px #d7f6f8;
+        color: white;
+    }
+
+.markdown-body {
+    --md-code-background: #acd7e9;
+    --md-code-radius: 5px;
 }
+    
 
 /*# sourceMappingURL=styles.css.map*/
