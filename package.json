@@ -48,7 +48,7 @@
 	"bugs": {
 		"url": "https://github.com/xgschwi/xgschwi.github.io/issues"
 	},
-	"homepage": "https://github.com/xgschwi/xgschwi.github.io",
+	"homepage": "/",
 	"devDependencies": {
 		"@babel/core": "^7.16.12",
 		"@babel/preset-env": "^7.16.11",
