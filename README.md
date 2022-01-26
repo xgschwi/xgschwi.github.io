@@ -1,8 +1,3 @@
-.markdown-body {
---md-code-background: #acd7e9;
---md-code-radius: 5px;
-}
-
 # Site Readme
 
 ### Description
@@ -64,10 +59,13 @@ Dependencies Include:
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
     "react-snap": "^1.23.0"
 ```
 
-Testing will be used to test the components; eslint and prettier will detect and format code as necessary when committing the code; react is the base of this web application; react-snap is being used for pre-rendering purposes of the javascript to html.
+Testing will be used to test the components; eslint and prettier will detect and format code as necessary when committing the code; react is the base of this web application; react-snap is being used for pre-rendering purposes of the javascript to html; react-helmet injects changes to document head to yield better data and performance for search engines; react router uses HashRouter and Link to move between views on the single page app.
 
 ### Scripts
 
@@ -77,7 +75,8 @@ Testing will be used to test the components; eslint and prettier will detect and
     "lintFix": "./node_modules/.bin/eslint src/** --fix",
     "format": "prettier --write \"**/*.{.js,jsx,json,md}\"",
     "build": "webpack --mode=production",
-    "postbuild": "react-snap"
+    "postbuild": "react-snap",
+    "dev-build": "rm dist/200.html && webpack --mode=production"
 ```
 
 - `npm run start` will serve the development server for the application
@@ -86,6 +85,7 @@ Testing will be used to test the components; eslint and prettier will detect and
 - `npm run format` uses prettier to format all code according to .prettierrc
 - `npm run build` will use webpack to build production files
 - `postbuild: react-snap` will run react-snap after the build phase and create 200.html with pre-rendered content for SEO purposes.
+- `npm run dev-build` will remove the 200.html file that needs to be rebuilt by webpack. This needs to be adjusted to remove if the file exists.
 
 ### Formatting
 
