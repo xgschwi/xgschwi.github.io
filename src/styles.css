@@ -1,24 +1,19 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
-@layer utilities {
-    .navbarItem {
-        margin: auto 0 auto 50px;
-        padding: 0 12px;
-        border-radius: 5px;
-        box-shadow: 2px 1px 2px 2px #d7f6f8;
-        color: white;
-    }
-    
-    .navbarItem:hover {
-        margin: auto 0 auto 50px;
-        padding: 0 12px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 3px 3px #d7f6f8;
-        color: white;
-    }
+.navbarItem {
+    margin: auto 0 auto 50px;
+    padding: 0 12px;
+    border-radius: 5px;
+    box-shadow: 2px 1px 2px 2px #d7f6f8;
+    color: white;
 }
+
+.navbarItem:hover {
+    margin: auto 0 auto 50px;
+    padding: 0 12px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 3px #d7f6f8;
+    color: white;
+}
+
 
 .markdown-body {
     --md-code-background: #acd7e9;

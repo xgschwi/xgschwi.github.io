@@ -2,7 +2,7 @@ import React from 'react';
 import { hydrate, render } from 'react-dom';
 import './styles.css';
 import { Helmet } from 'react-helmet';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import PBF from './components/PBF';
@@ -11,7 +11,7 @@ import Header from './components/Header';
 
 function Index() {
 	return (
-		<Router basename="/" hashType="slash">
+		<Router basename="/">
 			<Helmet>
 				<title>Xavier&apos;s Site</title>
 				<meta
@@ -27,11 +27,11 @@ function Index() {
 			</Helmet>
 			<Header />
 			<Routes>
-				<Route path="/" element={<Home />} />
+				<Route exact path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/pbf" element={<PBF />} />
 				<Route path="/csproblems" element={<CSProblems />} />
-				<Route path="*" element={<div>Error</div>} />
+				<Route path="*" element={<div>Error 404 Page Not Found</div>} />
 			</Routes>
 		</Router>
 	);

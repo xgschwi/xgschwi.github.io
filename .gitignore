@@ -1,4 +1,5 @@
 /node_modules
-**/dist/*.js
-**/dist/*.map
-**/dist/200.html
+# **/dist/*.js
+# **/dist/*.map
+# **/dist/200.html
+dist

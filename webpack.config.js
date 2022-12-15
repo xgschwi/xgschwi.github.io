@@ -1,16 +1,22 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+const CompressionPlugin = require('compression-webpack-plugin');
+const BundleAnalyzerPlugin =
+	require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const outputDirectory = 'dist';
 
 module.exports = {
-	entry: ['@babel/polyfill', './src/index.js'],
+	entry: ['babel-polyfill', './src/index.js'],
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.join(__dirname, outputDirectory),
+		filename: '[name].js',
+		sourceMapFilename: '[name].js.map',
 		publicPath: '/',
 	},
 	devServer: {
-		static: path.resolve(__dirname, 'dist'),
-		compress: true,
 		port: 3000,
 		historyApiFallback: true,
 	},
@@ -18,36 +24,47 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.css$/,
-				use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
-			},
-			{
-				test: /\.(png|jp(e*)g|svg|gif|ico)$/,
+				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
-				use: ['file-loader?name=[name].[ext]'],
-			},
-			{
-				test: /\.svg$/,
-				use: ['@svgr/webpack'],
-			},
-			{
-				test: /\.js$/,
-				loader: 'babel-loader',
-				options: {
-					presets: ['@babel/preset-env', '@babel/preset-react'],
+				use: {
+					loader: 'babel-loader',
 				},
+			},
+			{
+				test: /\.css$/,
+				use: ['style-loader', 'css-loader'],
+			},
+			{
+				test: /\.(png|woff|woff2|eot|ttf|svg|jpg|webp|pdf|ico)$/,
+				use: [
+					{
+						loader: 'url-loader?limit=100000',
+					},
+				],
 			},
 		],
 	},
+	resolve: {
+		extensions: ['*', '.js', '.jsx'],
+		fallback: { path: false, fs: false },
+	},
 	plugins: [
-		new MiniCssExtractPlugin({
-			filename: 'styles.css',
-			chunkFilename: 'styles.css',
-		}),
+		new CleanWebpackPlugin(),
+		// new MiniCssExtractPlugin({
+		// 	filename: 'styles.css',
+		// 	chunkFilename: 'styles.css',
+		// }),
 		new HtmlWebpackPlugin({
-			template: './dist/index.html',
-			filename: './index.html',
-			favicon: './rss/xicon.ico',
+			template: './public/index.html',
+			//filename: './index.html',
+			favicon: './public/xicon.ico',
+		}),
+		new CompressionPlugin({
+			filename: '[path][base].gz[query]',
+			algorithm: 'gzip',
+			test: /\.(js|css|html|svg)$/,
+			threshold: 8192,
+			minRatio: 0.8,
 		}),
 	],
 };

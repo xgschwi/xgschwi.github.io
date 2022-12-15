@@ -1,11 +1,13 @@
 import React from 'react';
+// import home from '../../rss/swings.jpg'
 
 function Home() {
 	return (
 		<div>
-			<p className="text-3xl text-light-green">
-				This page is still under construction. Stay tuned for more :D
-			</p>
+			<div className="">
+				<p>This site is under construction again!</p>
+				{/* <img src={home} className='' alt='About'/> */}
+			</div>
 		</div>
 	);
 }

@@ -55,18 +55,17 @@
 		"@babel/preset-react": "^7.16.7",
 		"autoprefixer": "^10.4.2",
 		"babel-loader": "^8.2.3",
+		"compression-webpack-plugin": "^10.0.0",
+		"copy-webpack-plugin": "^11.0.0",
 		"css-loader": "^6.5.1",
+		"dotenv-webpack": "^8.0.1",
 		"file-loader": "^6.2.0",
 		"husky": "^4.3.8",
 		"lint-staged": "^12.3.1",
 		"mini-css-extract-plugin": "^2.5.2",
-		"postcss": "^8.4.5",
-		"postcss-cli": "^9.1.0",
-		"postcss-loader": "^6.2.1",
-		"postcss-preset-env": "^7.2.3",
 		"style-loader": "^3.3.1",
-		"tailwindcss": "^3.0.16",
 		"webpack": "^5.67.0",
+		"webpack-bundle-analyzer": "^4.7.0",
 		"webpack-cli": "^4.9.2",
 		"webpack-dev-server": "^4.7.3"
 	},
@@ -75,6 +74,8 @@
 		"@testing-library/jest-dom": "^5.16.1",
 		"@testing-library/react": "^12.1.2",
 		"@testing-library/user-event": "^13.5.0",
+		"babel-polyfill": "^6.26.0",
+		"clean-webpack-plugin": "^4.0.0",
 		"eslint": "^8.7.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-prettier": "^8.3.0",
@@ -91,6 +92,7 @@
 		"react-helmet": "^6.1.0",
 		"react-router": "^6.2.1",
 		"react-router-dom": "^6.2.1",
-		"react-snap": "^1.23.0"
+		"react-snap": "^1.23.0",
+		"url-loader": "^4.1.1"
 	}
 }
