@@ -36,7 +36,12 @@
 			"collapseWhitespace": false,
 			"removeComments": false
 		},
-		"inlineCss": true
+		"inlineCss": true,
+		"puppeteerArgs": [
+			"--no-sandbox",
+			"--disable-setuid-sandbox"
+		  ],
+		"puppeteerExecutablePath": "/opt/google/chrome/google-chrome"
 	},
 	"repository": {
 		"type": "git",
