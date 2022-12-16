@@ -31,7 +31,7 @@ function Index() {
 				<Route path="/about" element={<About />} />
 				<Route path="/pbf" element={<PBF />} />
 				<Route path="/csproblems" element={<CSProblems />} />
-				<Route path="*" element={<div>Error 404 Page Not Found</div>} />
+				<Route path="*" element={<div>Error 404: Page Not Found</div>} />
 			</Routes>
 		</Router>
 	);
