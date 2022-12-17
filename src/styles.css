@@ -5,45 +5,75 @@
 .navbarItem:hover > a{
     cursor: pointer;
     color: transparent;
-    text-shadow: 0px 1px 10px rgba(255,255,255,0.99);
+    text-shadow: 0px 1px 10px rgba(131, 227, 185, 0.793);
     background-clip: text;
 }
 
 .navbarItem > a {
-    color: #E9E9E9 !important;
+    color: #57BC90 !important;
     text-decoration: none;
     font-size: 24px;
     font-weight: 900;
 }
 
-.navbarItem > a {
-    color: white !important;
-}
-
 .navbarItem > a:first {
-    color: #E9E9E9 !important;
     text-decoration: italic;
-    font-size: 24px;
-    font-weight: 900;
 }
 
 .navbar {
-    box-shadow: 0px 0px 3px 3px #CDCDCD;
+    /* box-shadow: 0px 0px 3px 3px #CDCDCD; */
+    
     width: 100vw;
     height: 10vh;
-    background-color: #99D3DF;
+    background-color: white;
+    /* background-color: #99D3DF; */
     display: flex;
+    position: fixed;
+}
+
+.navbarDown {
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+
 }
 
 body {
     margin: 0px !important;
+    overflow-x: hidden;
     font-family: 'Playfair Display';
     /* font-family: 'playfair'; */
 }
 /* Ice #99D3DF
 Fresh Water #88BBD6
 Plaster #CDCDCD
-Linen #E9E9E9 */
+Linen #E9E9E9 
+
+OR
+
+Feather #77C9D4
+Marine #57BC90
+Forest #015249
+Sleek Grey #A5A5AF
+
+*/
+
+
+
+.heroContainer {
+    padding-top: 10vh;
+    font-size: 30px;
+    font-weight: 700;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E9E9E9;
+    background: linear-gradient(to Right, #57BC90 60%, #015249);/*rgba(136, 187, 214, 0.9);*/
+}
+
+.heroContainer div:nth-child(n+2) {
+    padding-top: 20px;
+    font-size: 25px;
+}
 
 .markdown-body {
     --md-code-background: #acd7e9;

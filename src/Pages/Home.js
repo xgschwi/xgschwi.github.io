@@ -4,7 +4,7 @@ import React from 'react';
 function Home() {
 	return (
 		<div>
-			<div className="">
+			<div className="" style={{ height: 1000 }}>
 				<p>This site is under construction again!</p>
 				{/* <img src={home} className='' alt='About'/> */}
 			</div>
