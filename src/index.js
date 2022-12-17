@@ -8,6 +8,7 @@ import About from './components/About';
 import PBF from './components/PBF';
 import CSProblems from './components/CSProblems';
 import Header from './components/Header';
+import './playfair.css';
 
 function Index() {
 	return (
@@ -22,7 +23,7 @@ function Index() {
 				<meta property="og:site_name" content={`Xavier's Site`} />
 				<meta
 					property="keywords"
-					content="CS, React, Tailwind, Problems, Webpack, react-snap, Deploy, Formatting, Helmet"
+					content="CS, React, Problems, Webpack, react-snap, Deploy, Formatting, Helmet"
 				/>
 			</Helmet>
 			<Header />

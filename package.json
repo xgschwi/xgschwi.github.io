@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "./src/index.js",
 	"scripts": {
-		"start": "webpack serve --mode=development",
+		"start": "webpack serve --mode development --devtool inline-source-map --hot",
 		"lint": "./node_modules/.bin/eslint src/**",
 		"lintFix": "./node_modules/.bin/eslint src/** --fix",
 		"format": "prettier --write \"**/*.{.js,jsx,json,md}\"",
@@ -40,7 +40,7 @@
 		"puppeteerArgs": [
 			"--no-sandbox",
 			"--disable-setuid-sandbox"
-		  ],
+		],
 		"puppeteerExecutablePath": "/opt/google/chrome/google-chrome"
 	},
 	"repository": {

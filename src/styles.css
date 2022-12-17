@@ -1,19 +1,49 @@
 .navbarItem {
     margin: auto 0 auto 50px;
-    padding: 0 12px;
-    border-radius: 5px;
-    box-shadow: 2px 1px 2px 2px #d7f6f8;
-    color: white;
 }
 
-.navbarItem:hover {
-    margin: auto 0 auto 50px;
-    padding: 0 12px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 3px 3px #d7f6f8;
-    color: white;
+.navbarItem:hover > a{
+    cursor: pointer;
+    color: transparent;
+    text-shadow: 0px 1px 10px rgba(255,255,255,0.99);
+    background-clip: text;
 }
 
+.navbarItem > a {
+    color: #E9E9E9 !important;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.navbarItem > a {
+    color: white !important;
+}
+
+.navbarItem > a:first {
+    color: #E9E9E9 !important;
+    text-decoration: italic;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.navbar {
+    box-shadow: 0px 0px 3px 3px #CDCDCD;
+    width: 100vw;
+    height: 10vh;
+    background-color: #99D3DF;
+    display: flex;
+}
+
+body {
+    margin: 0px !important;
+    font-family: 'Playfair Display';
+    /* font-family: 'playfair'; */
+}
+/* Ice #99D3DF
+Fresh Water #88BBD6
+Plaster #CDCDCD
+Linen #E9E9E9 */
 
 .markdown-body {
     --md-code-background: #acd7e9;
