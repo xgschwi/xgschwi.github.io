@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { hydrate, render } from 'react-dom';
 import './styles.css';
 import { Helmet } from 'react-helmet';
@@ -11,6 +11,47 @@ import Header from './components/Header';
 import './playfair.css';
 
 function Index() {
+	const [heroContent, setHeroContent] = useState('');
+	// const [routeComponents, setRouteComponents] = useState([])
+	let routeComponents = [];
+	let routes = [
+		{
+			path: '/',
+			component: <Home />,
+		},
+		{
+			path: '/about',
+			component: <About />,
+		},
+		{
+			path: '/pbf',
+			component: <PBF />,
+		},
+		{
+			path: '/cs-problems',
+			component: <CSProblems />,
+		},
+		{
+			path: '*',
+			component: <Home />,
+		},
+	];
+
+	routes = routes.map(({ path, component }) => ({
+		component: React.cloneElement(component, {
+			setHero: setHeroContent,
+		}),
+		path,
+	}));
+
+	//  useEffect(() => {
+	// 	setRouteComponents(routes.map(({path, component}) => <Route path={path} element={component} key={`Route ${path}`} />))
+	//  }, [])
+
+	routeComponents = routes.map(({ path, component }) => (
+		<Route path={path} element={component} key={`Route ${path}`} />
+	));
+
 	return (
 		<Router basename="/">
 			<Helmet>
@@ -26,14 +67,8 @@ function Index() {
 					content="CS, React, Problems, Webpack, react-snap, Deploy, Formatting, Helmet"
 				/>
 			</Helmet>
-			<Header />
-			<Routes>
-				<Route exact path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/pbf" element={<PBF />} />
-				<Route path="/csproblems" element={<CSProblems />} />
-				<Route path="*" element={<div>Error 404: Page Not Found</div>} />
-			</Routes>
+			<Header heroContent={heroContent} />
+			<Routes>{routeComponents}</Routes>
 		</Router>
 	);
 }

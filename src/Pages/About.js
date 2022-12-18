@@ -11,6 +11,7 @@ function About() {
 					alt="About"
 				/>
 			</div>
+			<div>About me</div>
 		</div>
 	);
 }

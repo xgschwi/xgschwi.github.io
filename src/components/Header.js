@@ -2,11 +2,11 @@ import React from 'react';
 import Hero from './Hero';
 import Navbar from './Navbar';
 
-function Header() {
+function Header({ heroContent }) {
 	return (
 		<div style={{ height: 'fit-content' }}>
 			<Navbar />
-			<Hero />
+			<Hero content={heroContent} />
 		</div>
 	);
 }
