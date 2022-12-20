@@ -7,6 +7,7 @@ function Header({ heroContent }) {
 		<div style={{ height: 'fit-content' }}>
 			<Navbar />
 			<Hero content={heroContent} />
+			<div className="circles" style={{ top: -27 }} />
 		</div>
 	);
 }
