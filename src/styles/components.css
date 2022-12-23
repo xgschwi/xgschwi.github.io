@@ -1,0 +1,25 @@
+/* Left Right Text */
+.lrcontainer {
+    width: 85%;
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    height: 30vh;
+    margin: auto;
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+    border-radius: 10px;
+    align-items: center;
+    max-width: 900px;
+}
+
+.leftContent, .rightContent {
+    font-size: 16px;
+    flex-basis: 50%;
+}
+
+.middle {
+    height: 100%;
+    width: 3px;
+    background: black;
+    border-radius: 100%;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import swings from '../../rss/swings.jpg';
+import LeftRightText from '../components/LeftRightText';
 
 function Home({ setHero }) {
 	useEffect(() => {
@@ -12,13 +13,6 @@ function Home({ setHero }) {
 					<div>Howdy! I am Xavier Gschwind</div>
 					<div>An Application Developer at Art Unlimited</div>
 				</div>
-				{/* <div style={{ width: 400 }}>
-					<img
-						src={swings}
-						alt="Xavier"
-						style={{ maxHeight: '100%', maxWidth: '100%', borderRadius: '10%' }}
-					/>
-				</div> */}
 			</div>
 		);
 	}, []);
@@ -27,6 +21,7 @@ function Home({ setHero }) {
 		<div>
 			<div className="" style={{ height: 1000 }}>
 				<p>This site is under construction again!</p>
+				<LeftRightText left={<>App Development</>} right={<>Is my passion</>} />
 				{/* <img src={home} className='' alt='About'/> */}
 			</div>
 		</div>

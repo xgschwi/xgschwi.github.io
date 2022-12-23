@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { hydrate, render } from 'react-dom';
-import './styles.css';
+import './styles/styles.css';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
@@ -8,7 +8,8 @@ import About from './Pages/About';
 import PBF from './Pages/PBF';
 import CSProblems from './Pages/CSProblems';
 import Header from './components/Header';
-import './playfair.css';
+import './styles/playfair.css';
+import './styles/components.css';
 
 function Index() {
 	const [heroContent, setHeroContent] = useState('');
