@@ -149,3 +149,27 @@ Sleek Grey #A5A5AF
     50%{background-position:91% 100%}
     100%{background-position:10% 0%}
 }
+
+#mySVG {
+    position: absolute;
+    top: -50px;
+    width: 4%;
+    padding-bottom: 42%;
+    height: 1px;
+    overflow: visible;
+    /* margin-right: 35px; */
+  }
+  
+  .st0 {
+    fill: none;
+    stroke-dashoffset: 3px;
+    stroke: var(--forest);
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 20;
+  }
+  
+  .mask-style {
+    stroke: white;
+    stroke-width: 7;
+  }
