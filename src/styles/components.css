@@ -12,8 +12,89 @@
     max-width: 900px;
 }
 
+.container {
+    width: 85%;
+    display: flex;
+    gap: 20px;
+    padding: 0px 0px 10px 0px;
+    height: 50vh;
+    margin: auto;
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+    border-radius: 10px;
+    align-items: center;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.tabListContainer {
+    width: fit-content;
+    display: flex;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.tabListContainer li {
+    /* box-shadow: 0 2px 3px rgb(87 188 144/ 50%); */
+    box-shadow: 0 2px 3px rgb(256 256 256/ 50%);
+    border-radius: 0 0 0px 0px;
+    padding: 5px;
+    height: 90%;
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.tabListContainer li:hover {
+    font-weight: 900;
+    /* box-shadow: 0 2px 3px rgb(0 0 0 / 50%); */
+    box-shadow: 0px 2px 3px rgb(87 188 144 / 50%);
+}
+
+.tabListContainer .activeTab {
+    font-weight: 900;
+    /* box-shadow: 0 2px 3px rgb(0 0 0 / 50%); */
+    box-shadow: 0px 2px 3px rgb(87 188 144 / 50%);
+}
+
+
+.tabListContainer li:first-child {
+    border-radius: 0 0 0px 10px !important;
+}
+
+.tabDisplayContent ul{
+    list-style-type: disclosure-closed;
+}
+
+.tabDisplayContent ul li::marker{
+    color: var(--marine);
+}
+
+.tabDisplayContent {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    margin: 0px auto 10px auto;
+    overflow: auto;
+    justify-content: center;
+    padding: 5px;
+}
+
+.tabTitle {
+    box-shadow: 3px 2px 7px rgb(87 188 144 / 50%);
+    border-radius: 0 0 10px 0px;
+    padding: 5px;
+    height: 60%;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    font-weight: 900;
+}
+
 .leftContent, .rightContent {
     font-size: 16px;
+    display: flex;
     flex-basis: 50%;
 }
 

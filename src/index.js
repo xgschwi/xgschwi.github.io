@@ -11,8 +11,9 @@ import Header from './components/Header';
 import './styles/playfair.css';
 import './styles/components.css';
 
-function Index() {
+const Index = () => {
 	const [heroContent, setHeroContent] = useState('');
+
 	// const [routeComponents, setRouteComponents] = useState([])
 	let routeComponents = [];
 	let routes = [
@@ -72,7 +73,7 @@ function Index() {
 			<Routes>{routeComponents}</Routes>
 		</Router>
 	);
-}
+};
 
 const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+const Navbar = () => {
 	const [downClass, setDownClass] = useState('');
 
 	window.addEventListener('scroll', () => {
@@ -30,6 +30,6 @@ function Navbar() {
 			</div> */}
 		</div>
 	);
-}
+};
 
 export default Navbar;

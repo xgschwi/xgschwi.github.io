@@ -1,39 +1,64 @@
 import React, { useEffect } from 'react';
 import swings from '../../rss/swings.jpg';
-import LeftRightText from '../components/LeftRightText';
+// import LeftRightText from '../components/LeftRightText';
+import LeftTextRightTab from '../components/LeftTextRightTab';
 
-function Home({ setHero }) {
-	let myline;
-	let myline2;
-	let length;
+const workTabs = [
+	{
+		tabContent: (
+			<div>
+				I work with Art Unlimited as a Software Developer from December 2022 to
+				Present.
+				<ul>
+					<li>
+						Established 2 React.js frontends with Node.js backends that
+						communicate with MySQL Databases.
+					</li>
+					<li>
+						Facilitated 6 MySQL databases for an internal client and employee
+						tracking system and client websites.
+					</li>
+				</ul>
+			</div>
+		),
+		tabDisplay: 'Art Unlimited (22-Present)',
+	},
+	{
+		tabContent: (
+			<div>
+				I worked with Art Unlimited as a Software Developer Intern from November
+				2021 to December 2022.
+				<ul>
+					<li>
+						Spearheaded the creation of development practices for React.js
+						website development.
+					</li>
+					<li>
+						Engineered a React template with backend capabilities for future
+						React sites and sites in development.
+					</li>
+					<li>Led a team for React website development.</li>
+					<li>
+						Orchestrated practices to raise Google Lighthouse Scores of React
+						Websites from 60% and below to 80% or more.
+					</li>
+					<li>
+						Automated deployment of 1 existing application and 4 applications
+						with Continuous Integration/Continuous Development workflows for
+						projects launching on AWS and WHM cPanel environments.
+					</li>
+					<li>
+						Created users in AWS IAM, buckets in AWS S3, and environments in AWS
+						Elastic Beanstalk and Amplify for 4 projects.
+					</li>
+				</ul>
+			</div>
+		),
+		tabDisplay: 'Art Unlimited (21-22)',
+	},
+];
 
-	function myFunction() {
-		// What % down is it?
-		const homepage = document.getElementById('homepage');
-		// console.log(homepage.scrollHeight, homepage.offsetTop, document.body.scrollHeight, document.documentElement.scrollTop + .10*document.documentElement.clientHeight)
-		// console.log((document.documentElement.scrollTop + .10*document.documentElement.clientHeight - homepage.offsetTop)/(homepage.offsetHeight))
-		let scrollpercent =
-			document.documentElement.scrollTop / homepage.offsetHeight; // (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight + document.getElementById('homepage').scrollHeight)
-		// (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight );
-		// Length to offset the dashes
-		// eslint-disable-next-line prefer-template
-		// console.log('DBsT'+document.body.scrollTop, 'DEsT'+document.documentElement.scrollTop, 'DHsT'+document.getElementById('homepage').scrollTop, 'DHsH'+document.getElementById('homepage').scrollHeight,'DEsH'+document.documentElement.scrollHeight, 'DEcH'+document.documentElement.clientHeight, scrollpercent)
-		// let homepageDims = homepage.getBoundingClientRect();
-		// console.log(homepageDims)
-		if (scrollpercent < 0) scrollpercent = 0;
-		// else if (scrollpercent>0.30) scrollpercent*= 1.2
-		// else if (scrollpercent> 0.10) scrollpercent*=1.3
-		scrollpercent = 0.5 * (Math.sin((scrollpercent - 0.5) * Math.PI) + 1) * 2.3;
-		// scrollpercent = 0.99
-		const draw = length * scrollpercent;
-
-		try {
-			myline.style.strokeDashoffset = length - draw;
-			myline2.style.strokeDashoffset = length - draw;
-			// eslint-disable-next-line no-empty
-		} catch (e) {}
-	}
-
+const Home = ({ setHero }) => {
 	useEffect(() => {
 		setHero(
 			<div style={{ '--img': `url("${swings}")` }} className="heroBackground">
@@ -46,81 +71,32 @@ function Home({ setHero }) {
 				</div>
 			</div>
 		);
-
-		myline = document.getElementById('myline');
-		myline2 = document.getElementById('myline2');
-		length = myline.getTotalLength();
-		// circle = document.getElementById("circle");
-		// The start position of the drawing
-		myline.style.strokeDasharray = length;
-		myline2.style.strokeDasharray = length;
-		// Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
-		myline.style.strokeDashoffset = length;
-		myline2.style.strokeDashoffset = length;
 	}, []);
 
 	// For a cat
 	// const dVal = 'M 50 0 v 200 h -400 Q-550,100 -550,250 v 300 Q -550,750 -450,755 h 450' // 'M 50 0 v 100 h -400 Q-550,100 -550,250 v 300 Q -550,750 -450,755 h 450'
 	// const dVal2 = 'M 50 0 v 200 h 400 Q550,100 550,250 v 300 Q 550,750 450,755 h -450'
 
-	window.addEventListener('scroll', myFunction);
-	const dVal =
-		'M 50 0 v 180 H -800 Q-1000,180 -1000,350 v 300 Q -1000,750 -850,750 h 900'; // 'M 50 0 v 100 h -400 Q-550,100 -550,250 v 300 Q -550,750 -450,755 h 450'
-	const dVal2 =
-		'M 50 0 v 180 H 934 Q1084,180 1084,350 v 300 Q 1084,750 920,750 h -874'; // 'M 50 0 v 100 h 400 Q550,100 550,250 v 300 Q 550,750 450,755 h -450'
-	// const originalDVal = "M 20 0 v 20 a 30 30 0 0 0 30 30 h 600 a 40 40 0 0 1 0 80 h -140 a 30 30 0 0 0 0 60 h 200 a 40 40 0 0 1 0 80 h -100 a 30 30 0 0 0 -30 30 v 20"
 	return (
 		<div id="homepage">
-			<div className="" style={{ height: 1000, paddingTop: 20 }}>
-				<div
-					style={{
-						position: 'relative',
-						display: 'flex',
-						justifyContent: 'center',
-					}}
-				>
-					<svg
-						id="mySVG"
-						viewBox="0 0 100 100"
-						preserveAspectRatio="xMidYMin slice"
-					>
-						<defs>
-							<mask id="dash-mask">
-								<path
-									className="st0 mask-style"
-									strokeDasharray="10,9"
-									d={dVal}
-								/>
-								<path
-									className="st0 mask-style"
-									strokeDasharray="10,9"
-									d={dVal2}
-								/>
-							</mask>
-						</defs>
-						<path
-							id="myline"
-							className="st0"
-							strokeDasharray="10,9"
-							d={dVal}
-							mask="url(#dash-mask)"
-						/>
-						<path
-							id="myline2"
-							className="st0"
-							strokeDasharray="10,9"
-							d={dVal2}
-							mask="url(#dash-mask)"
-						/>
-						Sorry, your browser does not support inline SVG.
-					</svg>
-				</div>
-				<p>This site is under construction again!</p>
-				<LeftRightText left={<>Left Content</>} right={<>Right Content</>} />
-				{/* <img src={home} className='' alt='About'/> */}
+			<div style={{ margin: 'auto', maxWidth: '1200px', width: '70%' }}>
+				<h2 className="greenTitle">About Me</h2>
+				<p>
+					Hello and welcome to my site! I am Xavier Gschwind, a
+					Software/Application Developer at Art Unlimited. I am a graduate from
+					Bowling Green State University with a Bachelors of Science in Computer
+					Science as well as a minor in Marketing. As a lifelong learner, I look
+					to continuously grow in my skills and pick up new hobbies, whether it
+					be with technology, cooking, and so on. I often am enjoying the
+					occasional game, playing with my cats June and Gracie, or exploring on
+					walks.
+				</p>
 			</div>
+			<LeftTextRightTab tabs={workTabs} title="Work Experience" />
+			{/* <LeftRightText left={<>Left Content</>} right={<>Right Content</>} /> */}
+			{/* <img src={home} className='' alt='About'/> */}
 		</div>
 	);
-}
+};
 
 export default Home;

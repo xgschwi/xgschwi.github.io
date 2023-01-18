@@ -1,8 +1,7 @@
 import React from 'react';
 import about from '../../rss/swings.jpg';
 
-function About() {
-	return (
+const About = () => (
 		<div>
 			<div className="w-full bg-gray-light my-10 py-5">
 				<img
@@ -13,7 +12,6 @@ function About() {
 			</div>
 			<div>About me</div>
 		</div>
-	);
-}
+	)
 
 export default About;
