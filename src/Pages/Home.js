@@ -79,7 +79,14 @@ const Home = ({ setHero }) => {
 
 	return (
 		<div id="homepage">
-			<div style={{ margin: 'auto', maxWidth: '1200px', width: '70%' }}>
+			<div
+				style={{
+					margin: 'auto',
+					maxWidth: '1200px',
+					width: '70%',
+					padding: 20,
+				}}
+			>
 				<h2 className="greenTitle">About Me</h2>
 				<p>
 					Hello and welcome to my site! I am Xavier Gschwind, a
@@ -92,7 +99,9 @@ const Home = ({ setHero }) => {
 					walks.
 				</p>
 			</div>
-			<LeftTextRightTab tabs={workTabs} title="Work Experience" />
+			<div style={{ padding: 20 }}>
+				<LeftTextRightTab tabs={workTabs} title="Work Experience" />
+			</div>
 			{/* <LeftRightText left={<>Left Content</>} right={<>Right Content</>} /> */}
 			{/* <img src={home} className='' alt='About'/> */}
 		</div>

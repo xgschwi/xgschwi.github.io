@@ -1,9 +1,11 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { memo, useState, useEffect } from 'react';
+import useWindowDimensions from '../hooks/useWindowDimensions';
 
 const LeftTextRightTab = (props) => {
 	const [tab, setTab] = useState(0);
 	const [content, setContent] = useState(React.Fragment);
+	const { width } = useWindowDimensions();
 
 	useEffect(() => {
 		setContent(props.tabs[tab].tabContent);
@@ -36,7 +38,7 @@ const LeftTextRightTab = (props) => {
 								type="button"
 								className="strip-btn"
 							>
-								{t.tabDisplay}
+								{width > 767 ? t.tabDisplay : idx}
 							</button>
 						</li>
 					))}

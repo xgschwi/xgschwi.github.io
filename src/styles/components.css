@@ -72,10 +72,11 @@
 
 .tabDisplayContent {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     height: 100%;
     width: 90%;
-    margin: 0px auto 10px auto;
+    /* margin: 0px auto 10px auto; */
+    margin: auto;
     overflow: auto;
     justify-content: center;
     padding: 5px;
