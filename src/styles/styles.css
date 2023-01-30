@@ -1,5 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .navbarItem {
-    margin: auto 0 auto 50px;
+    @apply my-auto ml-14
 }
 
 :root{
@@ -7,47 +11,19 @@
     --feather: #77C9D4;
     --forest: #015249;
 }
-.navbarItem:hover > a{
-    cursor: pointer;
-    color: transparent;
-    text-shadow: 0px 1px 10px rgba(131, 227, 185, 0.793);
-    /* text-shadow: -1px 0px 0px var(--forest), 1px 0px 0px var(--forest), 0px -1px 0px var(--forest), 0px 1px 0px var(--forest); */
-    background-clip: text;
-}
 
 .navbarItem > a {
-    color: #57BC90 !important;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 900;
+    @apply text-[#57BC90] no-underline text-2xl font-extrabold
+         
 }
 
 .navbarItem > a:first {
-    text-decoration: italic;
-}
-
-.navbar {
-    /* box-shadow: 0px 0px 3px 3px #CDCDCD; */
-    
-    width: 100vw;
-    height: 10vh;
-    background-color: white;
-    /* background-color: #99D3DF; */
-    display: flex;
-    position: fixed;
-    z-index: 5;
+    @apply italic
 }
 
 .navbarDown {
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);
 
-}
-
-.greenTitle {
-    color: var(--marine);
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 900;
 }
 
 body {

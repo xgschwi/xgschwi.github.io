@@ -79,25 +79,24 @@ const Home = ({ setHero }) => {
 
 	return (
 		<div id="homepage">
-			<div
-				style={{
-					margin: 'auto',
-					maxWidth: '1200px',
-					width: '70%',
-					padding: 20,
-				}}
-			>
-				<h2 className="greenTitle">About Me</h2>
-				<p>
-					Hello and welcome to my site! I am Xavier Gschwind, a
-					Software/Application Developer at Art Unlimited. I am a graduate from
-					Bowling Green State University with a Bachelors of Science in Computer
-					Science as well as a minor in Marketing. As a lifelong learner, I look
-					to continuously grow in my skills and pick up new hobbies, whether it
-					be with technology, cooking, and so on. I often am enjoying the
-					occasional game, playing with my cats June and Gracie, or exploring on
-					walks.
-				</p>
+			<div className="max-w-7xl mx-auto w-3/4 p-5">
+				<h2 className="text-[var(--marine)] no-underline text-2xl font-extrabold py-5">
+					About Me
+				</h2>
+				<div className="flex flex-row gap-5 mx-auto justify-center indent-5">
+					<p>
+						Hello and welcome to my site! I am Xavier Gschwind, a
+						Software/Application Developer at Art Unlimited. I am a graduate
+						from Bowling Green State University with a Bachelors of Science in
+						Computer Science as well as a minor in Marketing.
+					</p>
+					<p>
+						As a lifelong learner, I look to continuously grow in my skills and
+						pick up new hobbies, whether it be with technology, cooking, and so
+						on. I often am enjoying the occasional game, playing with my cats
+						June and Gracie, or exploring on walks.
+					</p>
+				</div>
 			</div>
 			<div style={{ padding: 20 }}>
 				<LeftTextRightTab tabs={workTabs} title="Work Experience" />

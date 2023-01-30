@@ -11,16 +11,24 @@ const Navbar = () => {
 	});
 
 	return (
-		<div className={`navbar ${downClass}`}>
-			<div className="navbarItem">
-				<Link to="/">
+		<div className={`w-full h-[10vh] bg-white flex fixed z-10 ${downClass}`}>
+			<div className="navbarItem group">
+				<Link
+					to="/"
+					className="group-hover:cursor-pointer group-hover:bg-clip-text group-hover:text-shadow-nav"
+				>
 					Xavier
 					{/* <img className="rounded-full w-6 h-6" src={xicon} alt="logo" /> */}
 				</Link>
 			</div>
 
-			<div className="navbarItem">
-				<Link to="about">About</Link>
+			<div className="navbarItem group">
+				<Link
+					to="about"
+					className="group-hover:cursor-pointer group-hover:bg-clip-text group-hover:text-shadow-nav"
+				>
+					About
+				</Link>
 			</div>
 			{/* <div className="navbarItem">
 				<Link to="csproblems">Common CS Problems</Link>
