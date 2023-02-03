@@ -26,6 +26,60 @@
 
 }
 
+@layer base {
+    .scrollbar::-webkit-scrollbar {
+        height: 12px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb{
+        border: 1px solid var(--feather);
+        border-radius: 10px;
+        height: 10px;
+        background: var(--feather);
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+       box-shadow: 0px 1px 1px 0px white;
+       border: 1px solid white;
+    }
+
+
+
+    .scrollbar::-webkit-scrollbar-track {
+        /* background: white; */
+        height: 13px;
+        border-radius: 10px;
+    }
+
+    .scrollbar-y::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .scrollbar-y::-webkit-scrollbar-thumb{
+        border: 1px solid var(--feather);
+        border-radius: 10px;
+        width: 10px;
+        background: var(--feather);
+    }
+
+    .scrollbar-y::-webkit-scrollbar-thumb:hover {
+       box-shadow: 0px 1px 1px 0px white;
+       border: 1px solid white;
+    }
+
+
+
+    .scrollbar-y::-webkit-scrollbar-track {
+        /* background: white; */
+        height: 13px;
+        border-radius: 10px;
+    }
+
+    p {
+        @apply leading-loose
+    }
+}
+
 body {
     margin: 0px !important;
     overflow-x: hidden;

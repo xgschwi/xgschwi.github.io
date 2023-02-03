@@ -1,107 +1,51 @@
-/* Left Right Text */
-.lrcontainer {
-    width: 85%;
-    display: flex;
-    gap: 20px;
-    padding: 10px 20px;
-    height: 30vh;
-    margin: auto;
-    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
-    border-radius: 10px;
-    align-items: center;
-    max-width: 900px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.container {
-    width: 85%;
-    display: flex;
-    gap: 20px;
-    padding: 0px 0px 10px 0px;
-    height: 50vh;
-    margin: auto;
-    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
-    border-radius: 10px;
-    align-items: center;
-    max-width: 900px;
-    overflow: hidden;
-}
-
-.tabListContainer {
-    width: fit-content;
-    display: flex;
-    margin-left: auto;
-    margin-top: 0;
-}
-
-.tabListContainer li {
-    /* box-shadow: 0 2px 3px rgb(87 188 144/ 50%); */
-    box-shadow: 0 2px 3px rgb(256 256 256/ 50%);
-    border-radius: 0 0 0px 0px;
-    padding: 5px;
-    height: 90%;
-    align-items: center;
-    display: flex;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.tabListContainer li:hover {
-    font-weight: 900;
-    /* box-shadow: 0 2px 3px rgb(0 0 0 / 50%); */
-    box-shadow: 0px 2px 3px rgb(87 188 144 / 50%);
-}
-
-.tabListContainer .activeTab {
-    font-weight: 900;
-    /* box-shadow: 0 2px 3px rgb(0 0 0 / 50%); */
-    box-shadow: 0px 2px 3px rgb(87 188 144 / 50%);
-}
+@layer components {
+    /* Left Right Text */
+    .lrcontainer {
+        width: 85%;
+        display: flex;
+        gap: 20px;
+        padding: 10px 20px;
+        height: 30vh;
+        margin: auto;
+        box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+        border-radius: 10px;
+        align-items: center;
+        max-width: 900px;
+    }
 
 
-.tabListContainer li:first-child {
-    border-radius: 0 0 0px 10px !important;
-}
+    .tabDisplayContent ul{
+       
+        @apply list-[disclosure-closed] pt-8
 
-.tabDisplayContent ul{
-    list-style-type: disclosure-closed;
-}
+    }
 
-.tabDisplayContent ul li::marker{
-    color: var(--marine);
-}
+   .tabDisplayContent ul li::marker{
+        @apply text-[var(--marine)]
+    }
 
-.tabDisplayContent {
-    display: flex;
-    /* align-items: center; */
-    height: 100%;
-    width: 90%;
-    /* margin: 0px auto 10px auto; */
-    margin: auto;
-    overflow: auto;
-    justify-content: center;
-    padding: 5px;
-}
+    .tabDisplayContent ul li:hover::marker{
+        @apply text-white
+    }
 
-.tabTitle {
-    box-shadow: 3px 2px 7px rgb(87 188 144 / 50%);
-    border-radius: 0 0 10px 0px;
-    padding: 5px;
-    height: 60%;
-    align-items: center;
-    display: flex;
-    font-size: 20px;
-    font-weight: 900;
-}
+    .tabDisplayContent {
+        @apply flex h-full max-w-[70%] m-auto overflow-auto p-5 flex-col
+    }
 
-.leftContent, .rightContent {
-    font-size: 16px;
-    display: flex;
-    flex-basis: 50%;
-}
+    .leftContent, .rightContent {
+        font-size: 16px;
+        display: flex;
+        flex-basis: 50%;
+    }
 
-.middle {
-    height: 100%;
-    width: 3px;
-    background: black;
-    border-radius: 100%;
+    .middle {
+        height: 100%;
+        width: 3px;
+        background: black;
+        border-radius: 100%;
+    }
 }

@@ -24,5 +24,11 @@ module.exports = {
 				{ values: theme('textShadow') }
 			);
 		}),
+		plugin(function ({ addVariant }) {
+			addVariant('child-ul', '& ul');
+			addVariant('child-ul:marker', '& ul li::marker');
+			addVariant('list-disclosure-closed', '[&_ul]:list-[disclosure-closed]');
+			addVariant('marker-marine', '[&_ul_li]:marker:text-[var(--marine)]'); //[&_ul]:list-[disclosure-closed] [&_ul_li]:marker:text-[var(--marine)]
+		}),
 	],
 };
