@@ -24,10 +24,26 @@ const Navbar = () => {
 
 			<div className="navbarItem group">
 				<Link
-					to="about"
+					to="/about"
 					className="group-hover:cursor-pointer group-hover:bg-clip-text group-hover:text-shadow-nav"
 				>
 					About
+				</Link>
+			</div>
+			<div className="navbarItem group">
+				<Link
+					to="/work-experience"
+					className="group-hover:cursor-pointer group-hover:bg-clip-text group-hover:text-shadow-nav"
+				>
+					Work Experience
+				</Link>
+			</div>
+			<div className="navbarItem group">
+				<Link
+					to="/projects"
+					className="group-hover:cursor-pointer group-hover:bg-clip-text group-hover:text-shadow-nav"
+				>
+					Projects
 				</Link>
 			</div>
 			{/* <div className="navbarItem">

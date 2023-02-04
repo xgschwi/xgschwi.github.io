@@ -4,7 +4,7 @@ import './styles/styles.css';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
-import About from './Pages/About';
+
 import PBF from './Pages/PBF';
 import CSProblems from './Pages/CSProblems';
 import Header from './components/Header';
@@ -22,16 +22,16 @@ const Index = () => {
 			component: <Home />,
 		},
 		{
-			path: '/about',
-			component: <About />,
-		},
-		{
 			path: '/pbf',
 			component: <PBF />,
 		},
 		{
 			path: '/cs-problems',
 			component: <CSProblems />,
+		},
+		{
+			path: '/:anchor',
+			component: <Home />,
 		},
 		{
 			path: '*',

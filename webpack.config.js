@@ -35,7 +35,11 @@ module.exports = {
 				use: ['style-loader', 'css-loader', 'postcss-loader'],
 			},
 			{
-				test: /\.(png|woff|woff2|eot|ttf|svg|jpg|webp|pdf|ico)$/,
+				test: /\.svg$/,
+				use: ['@svgr/webpack'],
+			},
+			{
+				test: /\.(png|woff|woff2|eot|ttf|jpg|webp|pdf|ico)$/,
 				use: [
 					{
 						loader: 'url-loader?limit=100000',
@@ -65,5 +69,6 @@ module.exports = {
 			threshold: 8192,
 			minRatio: 0.8,
 		}),
+		new Dotenv(),
 	],
 };

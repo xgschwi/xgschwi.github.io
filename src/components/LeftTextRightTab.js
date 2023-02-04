@@ -5,31 +5,16 @@ import React, { memo, useState, useEffect } from 'react';
 const LeftTextRightTab = (props) => {
 	const [tab, setTab] = useState(0);
 	const [content, setContent] = useState(React.Fragment);
-	// const { width } = useWindowDimensions();
 
 	useEffect(() => {
 		setContent(props.tabs[tab].tabContent);
 	}, [tab]);
-	// width: 85%;
-	// display: flex;
-	// gap: 20px;
-	// padding: 0px 0px 10px 0px;
-	// height: 50vh;
-	// margin: auto;
-	// box-shadow: 0 0 5px rgb(0 0 0 / 50%);
-	// border-radius: 10px;
-	// align-items: center;
-	// max-width: 900px;
-	// overflow: hidden;
+
 	return (
 		<div
-			className="md:container text-white opacity-80 bg-[var(--forest)] flex-col w-full flex gap-5 mb-20 min-h-[65vh] max-h-[65vh] sm:min-h-[50vh] sm:max-h-[50vh] m-auto rounded-md align-middle shadow-[0 0 5px rgb(0 0 0 / 50%)] overflow-auto "
-			// style={{
-			// 	flexDirection: 'column',
-			// 	background: 'var(--forest)',
-			// 	color: 'white',
-			// 	opacity: '80%',
-			// }}
+			className={`container text-white opacity-80 bg-[var(--forest)] flex-col w-full flex gap-5 mb-20 min-h-[65vh] 
+			max-h-[65vh] sm:min-h-[50vh] sm:max-h-[50vh] m-auto rounded-md align-middle shadow-[0 0 5px rgb(0 0 0 / 50%)] 
+			overflow-auto ${props.className}`}
 		>
 			<div className="flex w-full overflow-visible sm:overflow-hidden">
 				<ul
@@ -41,7 +26,7 @@ const LeftTextRightTab = (props) => {
 							key={`tab${t.tabDisplay}`}
 							className={`${
 								tab === idx
-									? 'font-bold shadow-[0px_2px_3px_rgb(87_188_144_/_50%)] border-[var(--feather)] border-2'
+									? 'font-bold shadow-[0px_2px_3px_rgb(87_188_144_/_50%)] border-[var(--feather)] border-[3px]'
 									: ''
 							} p-2 h-[90%] items-center flex text-base font-semibold bg-[var(--marine)] 
 							shadow-[0_2px_3px_rgb(256_256_256/_50%)] rounded-[0_0_2px_2px] 
