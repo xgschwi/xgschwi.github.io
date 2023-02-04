@@ -18,10 +18,10 @@ const ProjectPart = ({ title, type, text, skills, links }) => (
 
 					return (
 						<li key={title + link.to}>
-							{/*  eslint-disable-next-line react/jsx-props-no-spreading */}
 							<a
 								href={link.to}
 								aria-hidden="true"
+								// eslint-disable-next-line react/jsx-props-no-spreading
 								{...aProps}
 								className="block w-10 [&>svg>path]:fill-[var(--feather)_!important] [&:hover>svg>path]:fill-[white_!important]"
 							>
