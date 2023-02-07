@@ -21,14 +21,27 @@ const projectList = [
 			},
 		],
 	},
+	{
+		title: 'Art Unlimited',
+		type: 'Professional',
+		text: 'Led development for the second custom React Site launched with Art Unlimited.',
+		skills: ['React.js', 'Node.js', 'Express', 'MySQL', 'cPanel'],
+		links: [
+			{
+				type: 'Website',
+				location: 'external',
+				to: 'https://artunlimitedusa.com',
+			},
+		],
+	},
 ];
 
 const Projects = () => (
-	<div className="max-w-7xl mx-auto w-3/4 p-5">
+	<div className="max-w-7xl mx-auto p-5">
 		<h2 className="text-[var(--marine)] no-underline text-2xl font-extrabold py-5">
 			Projects
 		</h2>
-		<div className="flex flex-col">
+		<div className="flex flex-row gap-5 flex-wrap justify-center">
 			{projectList.map((project) => (
 				<ProjectPart
 					key={project.title}
