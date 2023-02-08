@@ -34,14 +34,27 @@ const projectList = [
 			},
 		],
 	},
+	{
+		title: 'Full Stack Open',
+		type: 'Personal',
+		text: 'Participated in Full Stack Open Course for a MERN Stack',
+		skills: ['MongoDB', 'Express', 'React.js', 'Node.js'],
+		links: [
+			{
+				type: 'Github',
+				location: 'external',
+				to: 'https://github.com/xgschwi/FullStackOpen',
+			},
+		],
+	},
 ];
 
 const Projects = () => (
 	<div className="max-w-7xl mx-auto p-5">
-		<h2 className="text-[var(--marine)] no-underline text-2xl font-extrabold py-5">
+		<h2 className="text-[var(--marine)] no-underline text-2xl font-extrabold py-5 mx-auto w-fit">
 			Projects
 		</h2>
-		<div className="flex flex-row gap-5 flex-wrap justify-center">
+		<div className="flex flex-row gap-5 flex-wrap justify-center px-5">
 			{projectList.map((project) => (
 				<ProjectPart
 					key={project.title}

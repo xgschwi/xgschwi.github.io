@@ -12,7 +12,7 @@ const LeftTextRightTab = (props) => {
 
 	return (
 		<div
-			className={`container text-white opacity-80 bg-[var(--forest)] flex-col w-full flex gap-5 mb-20 min-h-[65vh] 
+			className={`text-white opacity-80 bg-[var(--forest)] flex-col w-full flex gap-5 mb-20 min-h-[65vh] 
 			max-h-[65vh] sm:min-h-[50vh] sm:max-h-[50vh] m-auto rounded-md align-middle shadow-[0 0 5px rgb(0 0 0 / 50%)] 
 			overflow-auto ${props.className}`}
 		>

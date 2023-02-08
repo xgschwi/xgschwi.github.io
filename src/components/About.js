@@ -3,7 +3,7 @@ import headshot from '../../assets/headshot.jpg';
 
 const About = () => (
 	<div className="max-w-7xl mx-auto w-3/4 p-5 container pl-5">
-		<h2 className="text-[var(--marine)] no-underline text-2xl font-extrabold py-5">
+		<h2 className="text-[var(--marine)] no-underline text-2xl font-extrabold py-5 mx-auto w-fit">
 			About Me
 		</h2>
 		<div className="flex flex-col md:flex-row gap-10 mx-auto justify-center indent-5 items-center">

@@ -115,7 +115,7 @@ const Home = ({ setHero }) => {
 			</div>
 
 			<div ref={workRef}>
-				<h2 className="text-[var(--marine)] no-underline text-2xl font-extrabold py-5 container m-auto pl-5 max-w-[1200px]">
+				<h2 className="text-[var(--marine)] no-underline text-2xl font-extrabold py-5 mx-auto pl-5 w-fit">
 					Work Experience
 				</h2>
 				<LeftTextRightTab tabs={workTabs} className="max-w-[1200px]" />
