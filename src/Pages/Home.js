@@ -114,13 +114,19 @@ const Home = ({ setHero }) => {
 				<About />
 			</div>
 
-			<div ref={workRef}>
+			<div
+				ref={workRef}
+				className="rounded-2xl my-8 bg-[#E8EFE1] container mx-auto py-5"
+			>
 				<h2 className="text-[var(--marine)] no-underline text-2xl font-extrabold py-5 mx-auto pl-5 w-fit">
 					Work Experience
 				</h2>
 				<LeftTextRightTab tabs={workTabs} className="max-w-[1200px]" />
 			</div>
-			<div ref={projRef}>
+			<div
+				ref={projRef}
+				className="rounded-md my-8 bg-[#E8EFE1] container mx-auto"
+			>
 				<Projects />
 			</div>
 

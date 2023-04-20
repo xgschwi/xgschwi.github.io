@@ -2,12 +2,12 @@ import React from 'react';
 import headshot from '../../assets/headshot.jpg';
 
 const About = () => (
-	<div className="max-w-7xl mx-auto w-3/4 p-5 container pl-5">
+	<div className="max-w-7xl mx-auto w-3/4 p-5 container pl-5 rounded-md my-8 bg-[#E8EFE1]">
 		<h2 className="text-[var(--marine)] no-underline text-2xl font-extrabold py-5 mx-auto w-fit">
 			About Me
 		</h2>
 		<div className="flex flex-col md:flex-row gap-10 mx-auto justify-center indent-5 items-center">
-			<div className="max-w-[90vw]">
+			<div className="max-w-[90vw] bg-[white] rounded-2xl px-4 flex-1 my-4 py-4">
 				<p className="mb-3">
 					Hello and welcome to my site! I am Xavier Gschwind, a
 					Software/Application Developer at Art Unlimited. I am a graduate from
@@ -26,7 +26,7 @@ const About = () => (
 				</ul>
 				<span>And that is just to name a few 😉</span>
 			</div>
-			<div>
+			<div className="bg-[white] rounded-2xl px-4 flex-1 my-4 py-4">
 				<p>
 					As a lifelong learner, I look to continuously grow in my skills by
 					learning modern tech stacks and applying it in personal projects. One
