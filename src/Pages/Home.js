@@ -125,7 +125,7 @@ const Home = ({ setHero }) => {
 			</div>
 			<div
 				ref={projRef}
-				className="rounded-md my-8 bg-[#E8EFE1] container mx-auto"
+				className="rounded-2xl my-8 bg-[#E8EFE1] container mx-auto"
 			>
 				<Projects />
 			</div>

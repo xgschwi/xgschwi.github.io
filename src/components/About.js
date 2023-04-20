@@ -2,7 +2,7 @@ import React from 'react';
 import headshot from '../../assets/headshot.jpg';
 
 const About = () => (
-	<div className="max-w-7xl mx-auto w-3/4 p-5 container pl-5 rounded-md my-8 bg-[#E8EFE1]">
+	<div className="max-w-7xl mx-auto w-3/4 p-5 container pl-5 rounded-2xl my-8 bg-[#E8EFE1]">
 		<h2 className="text-[var(--marine)] no-underline text-2xl font-extrabold py-5 mx-auto w-fit">
 			About Me
 		</h2>
