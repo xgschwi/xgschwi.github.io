@@ -63,9 +63,14 @@ const projectList = [
 		],
 		links: [
 			{
-				type: 'Github',
+				type: 'Website',
 				location: 'external',
 				to: 'https://drive.google.com/drive/folders/1DwUgx4EDtQbQ3TWaMLTlLDycuykeAfpy?usp=sharing',
+			},
+			{
+				type: 'Github',
+				location: 'external',
+				to: 'https://github.com/xgschwi/First-Laravel-App',
 			},
 		],
 	},
