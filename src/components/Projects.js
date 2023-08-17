@@ -47,6 +47,28 @@ const projectList = [
 			},
 		],
 	},
+	{
+		title: 'First Laravel App',
+		type: 'Personal',
+		text: 'Creating first PHP application on Laravel Framework',
+		skills: [
+			'Laravel',
+			'PHP',
+			'HTML',
+			'CSS',
+			'MVC',
+			'SQL',
+			'phpMyAdmin',
+			'XAMPP',
+		],
+		links: [
+			{
+				type: 'Github',
+				location: 'external',
+				to: 'https://drive.google.com/drive/folders/1DwUgx4EDtQbQ3TWaMLTlLDycuykeAfpy?usp=sharing',
+			},
+		],
+	},
 ];
 
 const Projects = () => (
