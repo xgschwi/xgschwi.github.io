@@ -24,6 +24,9 @@ const workTabs = [
 						Facilitated 6 MySQL databases for an internal client and employee
 						tracking system and client websites.
 					</li>
+					<li>Developing custom WordPress Sites</li>
+					<li>Optimizing website performance</li>
+					<li>Performing website maintenance</li>
 				</ul>
 			</div>
 		),
